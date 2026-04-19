@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Calangos Marketing</title>
+    <meta name="description"
+        content="Calangos Marketing cria presença digital, posicionamento e performance para marcas que querem parar de parecer amadoras e começar a vender com consistência." />
+    
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: "#0d0d0d",
+                        paper: "#f1f1f1",
+                        acid: "#a2ff00",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="icon" type="image/png" href="img/logo2 (2).png">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="site-shell bg-ink text-paper font-body">
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="ambient ambient-left" aria-hidden="true"></div>
+    <div class="ambient ambient-right" aria-hidden="true"></div>
+
+    <header class="site-header" id="navbar">
+        <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+
+            <a class="flex items-center gap-3" href="#hero">
+                <span class="brand-mark">
+                    <img src="img/logo.png" alt="Calangos" class="brand-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg viewBox=\'0 0 32 32\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'16\' cy=\'16\' r=\'16\' fill=\'%230d0d0d\'/><circle cx=\'16\' cy=\'16\' r=\'8\' fill=\'none\' stroke=\'%23a2ff00\' stroke-width=\'2\'/><circle cx=\'16\' cy=\'16\' r=\'3\' fill=\'%23a2ff00\'/></svg>'">
+                </span>
+                <span class="font-display text-lg font-bold tracking-[-0.04em] sm:text-xl text-white">Calangos</span>
+            </a>
+
+            <nav class="hidden items-center gap-8 text-sm font-medium text-white/60 lg:flex">
+                <a class="nav-link" href="#problema">Dores</a>
+                <a class="nav-link" href="#metodo">Método</a>
+                <a class="nav-link" href="#servicos">Serviços</a>
+                <a class="nav-link" href="#equipe">Equipe</a>
+                <a class="nav-link" href="#contato">Contato</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a class="inline-flex items-center gap-2 rounded-full bg-acid px-5 py-2.5 text-xs font-black uppercase tracking-wider text-black shadow-[0_0_30px_rgba(162,255,0,0.2)] transition duration-300 hover:-translate-y-0.5"
+                    href="#contato">
+                    Falar conosco
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section" id="hero">
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+
+            <div class="relative z-10 mx-auto max-w-6xl px-5 pb-10 text-center sm:px-6">
+
+                <div class="reveal-up mb-8 flex justify-center" style="transition-delay: 0.1s">
+                    <span
+                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[11px] font-bold uppercase tracking-[0.35em] text-white/60 backdrop-blur-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-acid shadow-[0_0_15px_rgba(162,255,0,1)] pulse-dot"></span>
+                        Posicionamento & Performance
+                    </span>
+                </div>
+
+                <div class="reveal-up" style="transition-delay: 0.2s">
+                    <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-acid">
+                        Estratégia Digital de Alto Padrão
+                    </p>
+                    <h1 class="hero-title font-display font-black leading-[1.0] tracking-[-0.06em] text-white">
+                        Sua empresa <span class="hero-highlight italic font-light">não cresce</span> <br
+                            class="hidden lg:block">
+                        porque ninguém te vê.
+                    </h1>
+                </div>
+
+                <div class="reveal-up mx-auto mt-10 max-w-3xl" style="transition-delay: 0.3s">
+                    <p class="text-xl leading-relaxed font-medium text-white/70 sm:text-2xl lg:text-[1.75rem]">
+                        Você não precisa de mais posts. Precisa de narrativa e um sistema visual que
+                        justifique seu preço antes da primeira venda.
+                    </p>
+
+                    <div
+                        class="mt-8 inline-flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold tracking-wide text-white/50 backdrop-blur">
+                        <span class="text-acid text-lg">●</span> Clareza • Percepção • Conversão
+                    </div>
+                </div>
+
+                <div class="reveal-up mt-12 flex justify-center" style="transition-delay: 0.4s">
+                    <a class="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-acid px-12 py-6 text-sm font-black uppercase tracking-[0.25em] text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(162,255,0,0.4)]"
+                        href="#contato">
+                        Quero escalar minha marca
+                        <span class="text-xl transition-transform duration-300 group-hover:translate-x-2">→</span>
+                    </a>
+                </div>
+
+                <!-- Scroll indicator -->
+                <div class="reveal-up mt-16 flex justify-center" style="transition-delay: 0.6s">
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEMA -->
+        <section class="section-wrap section-dark" id="problema">
+            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+                <div class="section-intro reveal-up">
+                    <span class="eyebrow">Problema real</span>
+                    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                        <h2 class="font-display text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl">
+                            A maioria das marcas não está perdendo mercado por falta de produto.
+                        </h2>
+                        <p class="max-w-2xl text-lg leading-8 text-white/62">
+                            Está perdendo porque parece igual, fala igual e passa a mesma sensação morna de sempre.
+                            Quem entra no seu perfil ou no seu site precisa sentir valor rápido.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="pain-card reveal-up tilt-card flex flex-col justify-between h-full" style="transition-delay: 0.05s">
+                        <div>
+                            <span class="pain-index">01</span>
+                            <h3 class="pain-title">Invisibilidade que custa caro</h3>
+                            <p class="pain-copy">
+                                Sua marca até existe. Mas não ocupa espaço na cabeça de ninguém. Sem presença forte,
+                                o cliente compara você só por preço.
+                            </p>
+                        </div>
+                        <div class="pain-foot">
+                            <span>Efeito direto</span>
+                            <strong>Menos atenção e vendas.</strong>
+                        </div>
+                    </article>
+
+                    <article class="pain-card reveal-up tilt-card flex flex-col justify-between h-full" style="transition-delay: 0.15s">
+                        <div>
+                            <span class="pain-index">02</span>
+                            <h3 class="pain-title">Redes sociais paradas</h3>
+                            <p class="pain-copy">
+                                Conteúdo sem intenção vira obrigação. E obrigação não gera desejo. Gera silêncio e
+                                irrelevância perante a concorrência.
+                            </p>
+                        </div>
+                        <div class="pain-foot">
+                            <span>Efeito direto</span>
+                            <strong>Audiência fria e passiva.</strong>
+                        </div>
+                    </article>
+
+                    <article class="pain-card reveal-up tilt-card flex flex-col justify-between h-full" style="transition-delay: 0.25s">
+                        <div>
+                            <span class="pain-index">03</span>
+                            <h3 class="pain-title">Marca sem diferenciação clara</h3>
+                            <p class="pain-copy">
+                                Se o cliente não percebe rapidamente o que torna sua empresa única,
+                                você vira só mais uma opção na prateleira digital e perde força na decisão.
+                            </p>
+                        </div>
+                        <div class="pain-foot">
+                            <span>Efeito direto</span>
+                            <strong>Disputa por preço e margem menor.</strong>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MÉTODO -->
+        <section class="section-wrap section-dark" id="metodo">
+            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+                    <div class="reveal-up">
+                        <span class="eyebrow">Método Calangos</span>
+                        <h2 class="mt-5 font-display text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl">
+                            A transformação acontece quando estratégia, estética e venda andam juntas.
+                        </h2>
+                        <p class="mt-6 max-w-xl text-lg leading-8 text-white/60">
+                            A gente não empilha entregas. Montamos um sistema de percepção e conversão para sua marca
+                            parar de parecer uma promessa e começar a parecer uma escolha óbvia.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-5">
+                        <article class="method-card reveal-up tilt-card" style="transition-delay: 0.05s">
+                            <span class="method-number">01</span>
+                            <div>
+                                <h3 class="method-title">Raio X do que está travando sua percepção</h3>
+                                <p class="method-copy">
+                                    A gente encontra os pontos em que sua marca some, confunde ou desperdiça clique.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-card reveal-up tilt-card method-offset" style="transition-delay: 0.12s">
+                            <span class="method-number">02</span>
+                            <div>
+                                <h3 class="method-title">Posicionamento que sustenta valor</h3>
+                                <p class="method-copy">
+                                    Ajustamos narrativa, oferta e visual para a sua empresa parar de parecer comum.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="method-card reveal-up tilt-card" style="transition-delay: 0.19s">
+                            <span class="method-number">03</span>
+                            <div>
+                                <h3 class="method-title">Implementação que gera resultado real</h3>
+                                <p class="method-copy">
+                                    Criamos conteúdo, identidade e páginas que fazem sua marca ser vista, lembrada e
+                                    escolhida.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-card reveal-up tilt-card method-offset-soft" style="transition-delay: 0.26s">
+                            <span class="method-number">04</span>
+                            <div>
+                                <h3 class="method-title">Ajuste contínuo para crescer sem perder força</h3>
+                                <p class="method-copy">
+                                    Medimos resposta, cortamos ruído e refinamos o que realmente move venda.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="section-wrap" id="servicos">
+            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+                <div class="section-intro reveal-up">
+                    <span class="eyebrow">Serviços principais</span>
+                    <div class="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+                        <h2 class="font-display text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl">
+                            Escolhemos as alavancas certas para sua marca ser lembrada e comprada.
+                        </h2>
+                        <p class="max-w-xl text-lg leading-8 text-white/60">
+                            Cada serviço entra para resolver um ponto de atrito claro. Nada de pacote inflado só
+                            para parecer grande.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-14 grid gap-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
+                    <article class="service-card service-card-featured reveal-up tilt-card" style="transition-delay: 0.05s">
+                        <div class="service-head">
+                            <span class="service-tag">Social Media</span>
+                            <span class="service-arrow">↗</span>
+                        </div>
+                        <h3 class="service-title">Conteúdo estratégico para atrair, engajar e vender.</h3>
+                        <p class="service-copy">
+                            Planejamento editorial, direção criativa e narrativa de marca para transformar seu perfil
+                            em um canal de autoridade e geração de vendas.
+                        </p>
+                        <ul class="service-list">
+                            <li>Direção de conteúdo e narrativa</li>
+                            <li>Presença que gera autoridade de verdade</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal-up tilt-card service-offset" style="transition-delay: 0.15s">
+                        <div class="service-head">
+                            <span class="service-tag">Design</span>
+                            <span class="service-arrow">↗</span>
+                        </div>
+                        <h3 class="service-title">Design que comunica valor já no primeiro olhar.</h3>
+                        <p class="service-copy">
+                            Identidade visual, direção de arte e materiais que deixam sua empresa mais forte,
+                            confiável e memorável.
+                        </p>
+                        <ul class="service-list">
+                            <li>Identidade visual premium</li>
+                            <li>Peças com unidade e personalidade</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card reveal-up tilt-card" style="transition-delay: 0.25s">
+                        <div class="service-head">
+                            <span class="service-tag">Websites</span>
+                            <span class="service-arrow">↗</span>
+                        </div>
+                        <h3 class="service-title">Páginas pensadas para orientar, convencer e converter.</h3>
+                        <p class="service-copy">
+                            Sites e landing pages que unem estética e estratégia para facilitar a decisão
+                            e aumentar a conversão.
+                        </p>
+                        <ul class="service-list">
+                            <li>Landing pages de alta resposta</li>
+                            <li>Sites institucionais com peso de marca</li>
+                            <li>UX com foco em clareza</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPE -->
+        <section class="section-wrap section-dark" id="equipe">
+            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+                <div class="section-intro reveal-up">
+                    <span class="eyebrow">Nossa equipe</span>
+                    <div class="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-end">
+                        <h2 class="font-display text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl">
+                            Pessoas reais com obsessão por resultado e estética.
+                        </h2>
+                        <p class="max-w-xl text-lg leading-8 text-white/60">
+                            Cada membro traz uma disciplina afiada. Juntos, constroem marcas que vendem sem precisar
+                            gritar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="team-card reveal-up tilt-card" style="transition-delay: 0.05s">
+                        <div class="team-photo-wrap">
+                            <img src="img/equipe-1.jpg" alt="Fábio Gutemberg" class="team-photo"
+                                 onerror="this.outerHTML='<div class=\'team-photo-fallback\'><span>FG</span></div>'">
+                            <div class="team-photo-overlay"></div>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-role">Estratégia & Conteúdo</div>
+                            <h3 class="team-name">Fábio Gutemberg</h3>
+                            <p class="team-bio">
+                                Especialista em narrativa de marca e planejamento editorial. Transforma posicionamento em linguagem que vende sem parecer forçado.
+                            </p>
+                      
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-up tilt-card" style="transition-delay: 0.15s">
+                        <div class="team-photo-wrap">
+                            <img src="img/equipe-2.jpg" alt="Joylson Melo" class="team-photo"
+                                 onerror="this.outerHTML='<div class=\'team-photo-fallback\'><span>JM</span></div>'">
+                            <div class="team-photo-overlay"></div>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-role">Design & Identidade Visual</div>
+                            <h3 class="team-name">Joylson Melo</h3>
+                            <p class="team-bio">
+                                Diretor de arte com foco em sistemas visuais de alto impacto. Cria marcas que parecem premium antes de qualquer reunião.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal-up tilt-card" style="transition-delay: 0.25s">
+                        <div class="team-photo-wrap">
+                            <img src="img/equipe-3.jpg" alt="Eduardo Maurício" class="team-photo"
+                                 onerror="this.outerHTML='<div class=\'team-photo-fallback\'><span>EM</span></div>'">
+                            <div class="team-photo-overlay"></div>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-role">Web & Performance Digital</div>
+                            <h3 class="team-name">Eduardo Maurício</h3>
+                            <p class="team-bio">
+                                Desenvolvedor front-end. Constrói páginas que não são só bonitas, elas convertem.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section-wrap" id="contato">
+            <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+                <div class="contact-block reveal-up">
+                    <div class="contact-glow" aria-hidden="true"></div>
+                    <div class="contact-inner">
+                        <div class="contact-text">
+                            <span class="eyebrow">Vamos conversar</span>
+                            <h2 class="mt-5 font-display text-4xl font-bold tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
+                                Se a sua marca já cansou de parecer menor do que realmente é.
+                            </h2>
+                            <p class="mt-6 max-w-xl text-lg leading-8 text-white/60">
+                                Diagnóstico, posicionamento e direção visual para construir uma presença que faz sentido
+                                e vende.
+                            </p>
+                        </div>
+                        <div class="contact-actions">
+                            <a class="cta-primary"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=calangosmarketing@gmail.com"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>calangosmarketing@gmail.com</span>
+                                <span class="cta-arrow">↗</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="flex items-center gap-3">
+                        <span class="brand-mark">
+                            <img src="img/logo.png" alt="Calangos" class="brand-image"
+                                 onerror="this.style.display='none'">
+                        </span>
+                        <span class="font-display text-xl font-bold tracking-[-0.04em] text-white">Calangos</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Presença digital que justifica seu preço antes da primeira reunião.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-pill" aria-label="Instagram">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-nav-group">
+                    <h4 class="footer-nav-title">Serviços</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#servicos">Social Media</a></li>
+                        <li><a href="#servicos">Design & Identidade</a></li>
+                        <li><a href="#servicos">Websites & Landing Pages</a></li>
+                        <li><a href="#servicos">Posicionamento de Marca</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-group">
+                    <h4 class="footer-nav-title">Empresa</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#metodo">Método</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-group">
+                    <h4 class="footer-nav-title">Fale com a gente</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=calangosmarketing@gmail.com" target="_blank" rel="noopener noreferrer">calangosmarketing@gmail.com</a></li>
+                    </ul>
+                   
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 Calangos Marketing. Todos os direitos reservados.</p>
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
