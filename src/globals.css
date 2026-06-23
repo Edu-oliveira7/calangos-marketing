@@ -1,0 +1,380 @@
+@import "tailwindcss";
+
+/* ─── Google Fonts ─── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;700&display=swap");
+
+/* ───────────────────────────────────────────────
+   Design Tokens (Tailwind v4)
+   Declarados uma única vez aqui e usados como
+   classes utilitárias: bg-ink, text-gold, font-display...
+─────────────────────────────────────────────── */
+@theme {
+  /* Cores de fundo */
+  --color-ink: #080808;
+  --color-surface: #111111;
+  --color-surface-raised: #1a1a1a;
+
+  /* Dourado da marca */
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
+  --color-gold-dark: #a8893a;
+
+  /* Tipografia */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ─── Reset base ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: #ffffff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Noise overlay ─── */
+.page-noise {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ─── Ambient orbs ─── */
+.ambient-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(120px);
+  opacity: 0.35;
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ambient-orb--left {
+  width: 42vw;
+  height: 42vw;
+  top: 18%;
+  left: -12%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1), transparent 70%);
+}
+
+.ambient-orb--right {
+  width: 36vw;
+  height: 36vw;
+  bottom: 28%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent 70%);
+}
+
+/* ─── Header ─── */
+.site-header {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 92%;
+  max-width: 1160px;
+  border-radius: 999px;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  background: rgba(8, 8, 8, 0.82);
+  backdrop-filter: blur(20px) saturate(130%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-header.scrolled {
+  top: 0.6rem;
+  width: 88%;
+  border-color: rgba(201, 168, 76, 0.28);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* ─── Nav links ─── */
+.nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-gold);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ─── Eyebrow ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 168, 76, 0.2), rgba(201, 168, 76, 0.85));
+  flex-shrink: 0;
+}
+
+/* ─── Reveal animation ─── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Cards ─── */
+.card-base {
+  border-radius: 1.75rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    var(--color-surface);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-base:hover {
+  border-color: rgba(201, 168, 76, 0.28);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 0.5px rgba(201, 168, 76, 0.1);
+  transform: translateY(-6px);
+}
+
+.card-featured {
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(201, 168, 76, 0.1) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.045) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    var(--color-surface);
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 48px rgba(201, 168, 76, 0.38);
+  background: var(--color-gold-light);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.84rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(201, 168, 76, 0.28);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+/* ─── Marquee ─── */
+.marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+}
+
+/* ─── Scroll indicator ─── */
+.scroll-mouse {
+  width: 26px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.scroll-dot-inner {
+  width: 4px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 999px;
+  animation: scrollBounce 2.4s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.6);
+}
+
+/* ─── Hero highlight ─── */
+.hero-highlight {
+  color: var(--color-gold);
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 0 0 50px rgba(201, 168, 76, 0.22);
+}
+
+/* ─── Method step offset ─── */
+@media (min-width: 1024px) {
+  .method-offset {
+    transform: translateX(1.75rem);
+  }
+}
+
+/* ─── Service card offset ─── */
+@media (min-width: 1024px) {
+  .service-offset {
+    transform: translateY(2rem);
+  }
+}
+
+/* ─── Keyframes ─── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulseGold {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+}
+
+/* ─── Acessibilidade: reduzir movimento ─── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-up,
+  .card-base,
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .scroll-dot-inner,
+  .marquee-track,
+  .ambient-orb {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    top: 0.75rem;
+    width: 95%;
+  }
+
+  .card-base {
+    border-radius: 1.25rem;
+  }
+}
