@@ -2,6 +2,12 @@ import { useEffect, useRef } from "react";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import MarqueeStrip from "./components/MarqueeStrip";
+import Problema from "./components/Problema";
+import Metodo from "./components/Metodo";
+import Servicos from "./components/Servicos";
+import Contato from "./components/Contato";
+import Footer from "./components/Footer";
 
 export default function App() {
   const ambientL = useRef(null);
@@ -41,7 +47,14 @@ export default function App() {
 
       <main>
         <Hero />
+        <MarqueeStrip />
+        <Problema />
+        <Metodo />
+        <Servicos />
+        <Contato />
       </main>
+
+      <Footer />
     </>
   );
 }
