@@ -46,8 +46,7 @@ O projeto foi desenvolvido com foco em **performance, design moderno e responsiv
 | ✨ Animações | Transições suaves com Framer Motion |
 | 📩 CTA | Seção de chamada para ação estratégica |
 | 📷 Instagram | Integração com redes sociais |
-| 📧 Contato | Formulário de contato direto |
-| 🚀 SEO | Otimização básica para motores de busca |
+
 
 ---
 
